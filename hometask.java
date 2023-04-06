@@ -17,15 +17,15 @@ public class hometask {
             while (true) {
                 String enter = scanner.nextLine();
                 list.add(enter);
+                list.remove("print");
+                list.remove("revert");
                 System.out.println(list.toString());
                 if (scanner.hasNext("print")) {
                     Collections.reverse(list);
                 }
-                list.remove("print");
                 if (scanner.hasNext("revert")) {
                     list.removeLast();
                 }
-                list.remove("revert");
                 if (scanner.hasNext("exit")) {
                     scanner.close();
                 }
